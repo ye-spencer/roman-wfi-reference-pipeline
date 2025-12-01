@@ -1,6 +1,11 @@
 ### Contributing Guide
 
-Please open a new issue or new pull request for bugs, feedback, or new features you would like to see.
+This repository contains materials related to the Roman WFI Reference File Pipeline. Through at least the entire calendar year of 2026, the development team’s primary focus is achieving operational stability. As a result, the maintainers may or may not be able to respond to GitHub Issues or discussions submitted to this repository. 
+
+We do appreciate community interest however. For questions, feedback, or support requests, the best and most reliable way to reach the team is through the Roman Helpdes:
+https://stsci.service-now.com/roman
+
+Thank you for your understanding and patience during this phase of mission development.
 
 See the instructions below for how to contribute to this repository using a forking workflow.
 
