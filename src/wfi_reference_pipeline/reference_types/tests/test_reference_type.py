@@ -86,6 +86,14 @@ def valid_outfile(tmp_path):
     outfile = tmp_path / "outfile.asdf"
     return outfile
 
+
+"""
+NOTE SYE: Explaining Factory
+
+This fixture is a factory. It returns a function (not a value, like a typical fixture)
+that can be passed into a test like a typical fixture. This function can then be called
+inside the test. Factories are similar to having a helper function that returns an object.
+"""
 @pytest.fixture 
 def make_test_ref(valid_test_metadata, valid_test_filelist, valid_test_referencedata, valid_outfile):
     
