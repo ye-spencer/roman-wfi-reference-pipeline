@@ -96,7 +96,7 @@ class IntegralNonLinearity(ReferenceType):
 
         # If INL correction arrays are provded as input into class then check everything needed
         # for the array to be valid.
-        elif ref_type_data:
+        elif ref_type_data is not None:
             # Convert to numpy array and enforce dtype in one go
             ref_type_data = np.asarray(ref_type_data, dtype=np.float64)
 
@@ -130,7 +130,7 @@ class IntegralNonLinearity(ReferenceType):
             self.inl_correction = ref_type_data
             self.value_array = np.linspace(0, 65535, n_val, dtype=np.uint16)
 
-        elif file_list:
+        elif file_list is not None:
             raise ValueError(
                     "Module currently not capable to support file list input."
                     )
