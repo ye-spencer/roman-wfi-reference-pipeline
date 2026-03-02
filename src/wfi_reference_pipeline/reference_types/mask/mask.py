@@ -50,7 +50,7 @@ class Mask(ReferenceType):
     def __init__(
         self,
         meta_data,
-        file_list=None,
+        file_list=[],
         ref_type_data=None,
         bit_mask=None,
         outfile="roman_mask.asdf",
