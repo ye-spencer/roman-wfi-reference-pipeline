@@ -6,30 +6,6 @@ except ImportError:
     logging.warning("Attempting to import rtb_db when not available, install package using rtb_db optional dependency")
 
 
-
-def get_ma_table_from_rtbdb(ma_table_number=None):
-    """
-    This method get_ma_table_from_rtb_db() accesses the rtb_database information on MA tables.
-
-    Parameters
-    ----------
-    ma_table_number: integer
-        Data base entry for unique MA Table number.
-
-    Returns
-    -------
-    ma_table_dict: dictionary
-        A python dictionary of MA Table information. See RTB Database examples for keys and values.
-    """
-    eng = login.connect_server(dsn_name='DWRINSDB')
-    ma_table_dict = rfp_tools.query_ma_table(eng, ma_table_number)
-    if ma_table_dict:
-        logging.info(
-            'Successfully read MA Table information from the RTB Database.'
-        )
-    return ma_table_dict
-
-
 def make_even_spacing_read_pattern(num_resultants=None, num_rds_per_res=None):
     """
     The method make_even_spacing_read_pattern() is a helper function to generate a read pattern

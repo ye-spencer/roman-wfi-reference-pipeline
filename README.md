@@ -45,7 +45,7 @@ Notes:
     1) You will need access to the Roman Grit group and might need to configure git on your machine to use a username and password that are registered with the Roman Grit group.
     2) If you have 2FA enabled for your Grit account, you will need to use an access token to `pip install .[rtbdb]`.  Follow the instructions to [create an access token](https://grit.stsci.edu/help/user/profile/personal_access_tokens.md#create-a-personal-access-token).  This access token can now be used as your user password when prompted during the install.
 
-Using conda, please run the following:
+Using conda, please run the following in the specified order:
 ```
 conda activate wfirefpipe
 pip install .[rtbdb]

@@ -21,6 +21,9 @@ class DBEntry:
 
     @staticmethod
     def get_date_time_formatted():
+        """
+        Internal Database has this specific format required
+        """
         return datetime.today().replace(microsecond=0)
 
     def init_rfp_log_pro(self, ref_type, wfi_mode, reef_monitor):
