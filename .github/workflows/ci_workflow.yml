@@ -53,9 +53,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: coverage-info
         publish_dir: .
-        include_files: coverage-badge.svg,coverage-summary.json
+        include_files: coverage-badge.svg, coverage.xml
         commit_message: "Update coverage badge [skip ci]"
 
     - name: Coverage diff on PR
-      if: ${{ env.COVERAGE == 'true' && github.event_name == 'pull_request' }}
-      run: echo "TODO"
+      if: ${{ env.COVERAGE == 'true' && github.event_name == 'pull_request' && github.base_ref == 'main'}}
+      uses: ./.github/jobs/coverage_diff
